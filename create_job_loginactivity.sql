@@ -130,10 +130,8 @@ BEGIN
         EXEC @ReturnCode = msdb.dbo.sp_add_job
             @job_name = N'DBA - Loginactivity',
             @enabled = 1,
-            @description =
-                N'Collects SQL Server user sessions every minute into '
-                + N'DBA.dbo.LoginActivity. Updates LastSeen for existing '
-                + N'signatures and inserts new signatures.',
+            @description = N'Collects SQL Server user sessions every minute into DBA.dbo.LoginActivity. 
+                              Updates LastSeen for existing signatures and inserts new signatures.',
             @category_name = N'[Uncategorized (Local)]',
             @owner_login_name = N'sa',
             @job_id = @JobID OUTPUT;
